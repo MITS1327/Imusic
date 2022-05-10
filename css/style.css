@@ -1,0 +1,728 @@
+/* @font-face {
+  font-family: 'OpenSansRegular';
+  src: url('fonts/OpenSansRegular.eot');
+  src: url('fonts/OpenSansRegular.eot') format('embedded-opentype'),
+       url('fonts/OpenSansRegular.woff2') format('woff2'),
+       url('fonts/OpenSansRegular.woff') format('woff'),
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  /* font-family: 'OpenSansRegular' */
+  background-color: #000000;
+  z-index: 100;
+  opacity: 1;
+}
+
+
+.background {
+  margin-left: 0px;
+  display: block;
+  position: fixed;
+  background-image: url('/sprites/Группа\ масок\ 1.png');
+  top: 0;
+  left: 0;
+  width: 660px;
+  height: 660px;
+  z-index: -100;
+  background-position: top left;
+  filter: blur(100px);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+button:hover {
+  color: white;
+}
+
+button:focus {
+  border-bottom: 2px solid #2A86C7;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+  font-size: medium;
+  font-weight: 600;
+}
+
+input {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* header styles */
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #060608;
+  max-height: 74px;
+  padding-left: 80px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-right: 30px;
+}
+
+.header__logo {
+  margin-right: 299px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  margin-right: 900px;
+}
+
+.nav__li:not(:last-child) {
+  margin-right: 22px;
+}
+
+.nav__li_btn {
+  color: #B1B2B8;
+}
+
+.search__input {
+  visibility: hidden;
+  background-color: #707070;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+.input-active {
+  visibility: visible;
+}
+
+.search__input::placeholder {
+  color: #B1B2B8;
+}
+
+.nav__li_btn-search {
+  width: 20px;
+  height: 20px;
+  background-image: url('/sprites/search.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+/* section-hero styles */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-l {
+  display: flex;
+  flex-direction: column;
+  background-color: #14161D;
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding-left: 80px;
+  padding-top: 29px;
+  padding-right: 29px;
+  padding-bottom: 27px;
+}
+
+.profile__face {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.profile__avatar {
+  display: block;
+  background-image: url('/sprites/avatar.jpg');
+  width: 42px;
+  height: 42px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+.profile-active {
+  border: 1px solid #2A86C7;
+}
+
+.profile__name {
+  color: white;
+  padding-right: 65px;
+}
+
+.profile__dropdown {
+  display: none;
+}
+
+.menu-opened {
+  background-color:#2B2C36;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.is-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown__account-settings {
+  border-top: 1px solid #45464E;
+  border-bottom: 1px solid #45464E;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+}
+
+.dropdown__account-settings-profile {
+  color: white;
+  margin-bottom: 23px;
+}
+
+.dropdown__account-settings-account {
+  color: white;
+}
+
+.dropdown__create-page-content {
+  color: white;
+}
+
+.burger {
+  display: block;
+  background-image: url('/sprites/icons8-menu.svg');
+  width: 24px;
+  height: 24px;
+}
+
+.actions__list {
+}
+
+.actions__list_li {
+  color: white;
+  padding-left: 80px;
+
+}
+
+.actions__list_li:hover {
+  background-color: #252731;
+}
+
+.actions__list_li:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.playlist {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.li__playlists_btn {
+  background-image: url('/sprites/plus.svg');
+  padding: 16px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 100px;
+}
+
+.playlists__list_li {
+  color: white;
+  padding-left: 80px;
+}
+
+.playlists__list_li:hover {
+  background-color: #252731;
+}
+
+.playlists__list_li:not(:last-child) {
+  margin-bottom: 33px;
+}
+
+.hero-r {
+  background-color: #14161D;
+}
+
+.right__headings {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 88px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 7px 7px #060608;
+  margin-bottom: 24px;
+}
+
+.left__heading {
+  margin-right: 85px;
+  color: #B1B2B8;
+}
+
+.right__heading {
+  color: #B1B2B8;
+}
+
+.track__list {
+  max-height: 850px;
+  overflow: scroll;
+}
+
+.track__list::-webkit-scrollbar {
+  width: 0px;
+}
+
+.track__li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.track__li {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+.track__li:hover {
+  background-color: #1C1D23;
+}
+
+.track__avatar:hover {
+  background-color: #1C1D23;
+  border: 1px solid #2A86C7;
+  border-radius: 10px;
+}
+
+.track__description_block {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.track__description {
+  color: #99999F;
+}
+
+.track__avatar {
+  display: block;
+  background-image: url('/sprites/track-avatar.jpg');
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 9px;
+}
+
+.hero-c {
+  position: relative;
+  width: 935px;
+  height: 400px;
+  margin-top: 24px;
+  border-radius: 10px;
+  background-color: #000000;
+}
+
+.relese__artist_img {
+  margin-left: 535px;
+  display: block;
+  background-image: url('/sprites/Kanye-West_2016_P1.png');
+  background: linear-gradient(to right, rgba(0,0,0, 0.9), rgba(255, 255, 255, 0.1)),url('/sprites/Kanye-West_2016_P1.png');
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero__main-heading {
+  position: absolute;
+  padding-top: 125px;
+  padding-left: 73px;
+  top: 0;
+  color: white;
+}
+
+.hero__main_release {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding-top: 175px;
+  padding-left: 54px;
+  top: 0;
+  color: white;
+}
+
+.release__list {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.release__li:not(:last-child) {
+  margin-right: 5px;
+}
+
+.kanye {
+  display: block;
+  background-image: url('/sprites/Kanye-West_2016_P1.png');
+  width: 54px;
+  height: 54px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.man1 {
+  display: block;
+  background-image: url('/sprites/chjS8zYo_400x400.jpg');
+  width: 54px;
+  height: 54px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.man2 {
+  display: block;
+  background-image: url('/sprites/71ac8fa5070ab565a72f96505e4f2f10.jpg');
+  width: 54px;
+  height: 54px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.girl1 {
+  display: block;
+  background-image: url('/sprites/images\ \(8\).jpg');
+  width: 54px;
+  height: 54px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.girl2 {
+  display: block;
+  background-image: url('/sprites/unnamed\ \(20\).jpg');
+  width: 54px;
+  height: 54px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* player styles */
+
+.player {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-height: 96px;
+  background-color: #0F0F17;
+  padding-left: 80px;
+  padding-right: 90px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 100%;
+  background-image: url('/sprites/timeline.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.player__track {
+  display: flex;
+  align-items: center;
+}
+
+.player__track_avatar {
+  display: block;
+  background-image: url('/sprites/cardi-track.jpg');
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 9px;
+}
+
+.player__track_description {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-right: 75px;
+}
+
+.player__track_artist {
+  color: #99999F;
+}
+
+.player__volume {
+  background-image: url('/sprites/volume.svg');
+  width: 84px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 360px;
+}
+
+.player__controller {
+  margin-right: 390px;
+}
+
+.controller__list {
+  display: flex;
+  align-items: center;
+}
+
+.controller__li_btn {
+  color: white;
+}
+
+.controller__li:not(:last-child) {
+  margin-right: 37px;
+}
+
+.play {
+  background-image: url('/sprites/player-play.svg');
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.stop {
+  background-image: url('/sprites/player-stop.svg');
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.player__moves {
+  display: flex;
+  align-items: center;
+}
+
+.moves__time {
+  color: white;
+  margin-right: 39px;
+}
+
+.moves__time_description {
+  color:#99999F;
+}
+
+.moves__list {
+  display: flex;
+  align-items: center;
+}
+
+.moves__li:not(:last-child) {
+  margin-right: 38px;
+}
+
+.moves__li_btn {
+  color: white;
+}
+
+
+/* media */
+
+@media (max-width:1800px) {
+  .nav__list {
+    margin-right: 0;
+  }
+}
+
+@media (max-width:1600px) {
+  .right__headings {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  .left__heading {
+    margin: 0;
+  }
+}
+
+@media (max-width:1400px) {
+  .relese__artist_img {
+    margin: 0;
+  }
+}
+
+@media (max-width:770px) {
+  .header__logo {
+    margin: 0;
+  }
+
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-c {
+    margin: 0;
+  }
+
+  .hero__main_content {
+    max-width: 200px;
+  }
+
+  .relese__artist_img {
+    max-width: 200px;
+  }
+
+  .release__list {
+    flex-direction: column;
+  }
+
+  .release__li:not(:last-child) {
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+
+  body {
+    font-weight: smaller;
+  }
+
+  .hero__main_content {
+    margin-right: 0;
+  }
+
+  .hero__main-heading {
+    padding-right: 0;
+  }
+
+  .player {
+    padding-left: 10px;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .player__volume {
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .controller__li:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .player__controller {
+    margin-right: 40px;
+  }
+
+  .moves__list {
+    display: none;
+  }
+
+  .moves__time {
+    margin-right: 0;
+  }
+
+  .player__track_description {
+    margin-right: 50px;
+  }
+}
+
+/* I had an idea to hide widgets and show them after clicking on some button, but unfortunately I didn't have enough time :/ */
+
+@media (max-width: 400px) {
+  .hero-c {
+    display: none;
+  }
+
+  .header__logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 150px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .profile {
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .player {
+    padding-left: 10px;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .player__volume {
+    margin: 0;
+  }
+
+  .controller__li:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  .player__controller {
+    margin-right: 10px;
+  }
+
+  .moves__list {
+    display: none;
+  }
+
+  .moves__time {
+    margin-right: 0;
+  }
+
+  .player__track_description {
+    margin-right: 10px;
+  }
+
+  .background {
+    display: none;
+  }
+
+  .header {
+    padding: 0;
+  }
+}
