@@ -101,7 +101,7 @@ img {
 .nav__list {
   display: flex;
   align-items: center;
-  margin-right: 900px;
+  margin-right: 834px;
 }
 
 .nav__li:not(:last-child) {
@@ -302,8 +302,8 @@ img {
 }
 
 .track__list {
-  max-height: 850px;
-  overflow: scroll;
+  max-height :  680px;
+  overflow-y: scroll;
 }
 
 .track__list::-webkit-scrollbar {
@@ -320,6 +320,22 @@ img {
   padding: 5px;
   padding-left: 20px;
   border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.track__link {
+  content : '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.track__name {
+  pointer-events: none;
 }
 
 .track__li:hover {
@@ -336,6 +352,7 @@ img {
   display: flex;
   flex-direction: column;
   color: white;
+  pointer-events: none;
 }
 
 .track__description {
@@ -473,7 +490,7 @@ img {
 
 .player__track_avatar {
   display: block;
-  background-image: url('/sprites/cardi-track.jpg');
+  background-image: url('/sprites/track-avatar.jpg');
   width: 48px;
   height: 48px;
   background-repeat: no-repeat;
@@ -486,6 +503,7 @@ img {
   flex-direction: column;
   color: white;
   margin-right: 75px;
+  width: 120px;
 }
 
 .player__track_artist {
@@ -595,6 +613,10 @@ img {
     margin: 0;
   }
 
+  .track__avatar {
+    display: none;
+  }
+
   .header {
     padding-top: 0;
     padding-bottom: 0;
@@ -667,7 +689,7 @@ img {
 
 /* I had an idea to hide widgets and show them after clicking on some button, but unfortunately I didn't have enough time :/ */
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .hero-c {
     display: none;
   }
